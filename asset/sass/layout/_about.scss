@@ -1,0 +1,171 @@
+.about-area{
+
+        .about-shape{
+            img{
+                height: auto;
+                width: auto;
+            }
+
+            position: absolute;
+            top: 140px;
+            right: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 300px;
+
+            @media #{$large-device} {
+                top: 100px;
+                
+            }
+            @media #{$medium-device} {
+                top: 80px;
+                
+            }
+            @media #{$small-device} {
+                top: 40px;
+                
+            }
+        }
+
+    .about-headding{
+        @include marg-t(140);
+
+        @media #{$large-device} {
+            @include marg-t(100);
+            
+        }
+        @media #{$medium-device} {
+            @include marg-t(80);
+            
+        }
+        @media #{$small-device} {
+            @include marg-t(40);
+            
+        }
+
+        @include padd-both(80, 100);
+
+        @media #{$large-device} {
+            @include padd-both(60, 80);
+            
+        }
+        @media #{$medium-device} {
+            @include padd-both(40, 60);
+            
+        }
+        @media #{$small-device} {
+            @include padd-both(25, 30);
+            
+        }
+
+        position: relative;
+        background-color: $white-color;
+
+        &:after{
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            left: 0;
+            top: 0;
+            content: '';
+            background: $main-color;
+        }
+        h2{
+            line-height: 55px;
+
+            @media #{$large-device} {
+                line-height: 45px;
+            }
+            @media #{$medium-device} {
+                line-height: 35px;
+                
+            }
+            @media #{$small-device} {
+                line-height: 30px;
+                
+            }
+        }
+        .about-contain{
+            p{
+                &:first-child{
+                    @include padd-t(30);
+                
+                    @media #{$large-device} {
+                        @include padd-t(20);
+                        
+                    }
+                    @media #{$medium-device} {
+                        @include padd-t(16);
+                        
+                    }
+                }
+
+                @include para-style;
+    
+
+                @include padd-b(30);
+                
+                @media #{$large-device} {
+                    @include padd-b(20);
+                    
+                }
+                @media #{$medium-device} {
+                    @include padd-b(16);
+                    
+                }
+            }
+            button{
+                a{
+                    @include btn;
+                }
+            }
+        }
+    }
+
+    //about-index
+    .about-left{
+
+        .image{
+            bottom: 0;
+            right: 0;
+
+
+            @media #{$large-device} {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @media #{$small-device} {
+                position: static !important;
+                top: 0%;
+                transform: translateY(0%);
+                
+            }
+
+            img{
+                @media #{$large-device} {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .about-space{
+        margin: 0;
+        @include padd-both(100, 60);
+
+        @media #{$large-device} {
+            @include padd-both(50, 40);
+            
+        }
+        @media #{$medium-device} {
+            @include padd-both(30, 0);
+            
+        }
+        @media #{$small-device} {
+            @include padd-both(20, 0);
+            
+        }
+    }
+}
+

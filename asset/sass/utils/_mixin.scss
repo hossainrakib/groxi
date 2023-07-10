@@ -1,0 +1,153 @@
+//padding-margin both
+
+@mixin pm-y-both($padding, $margin) {
+    padding-top: $padding + px;
+    padding-bottom: $padding + px;
+    margin-top: $margin + px;
+    margin-bottom: $margin + px;
+    
+}
+@mixin padd-both($padding-x, $padding-y) {
+    padding: $padding-x + px  $padding-y + px;
+}
+@mixin padd-x($padd-L, $padd-R) {
+    padding-left: $padd-L + px;
+    padding-right: $padd-R + px;
+    
+}
+
+@mixin padd-y($padd-T, $padd-B) {
+    padding-top: $padd-T + px;
+    padding-bottom: $padd-B + px;
+    
+}
+
+@mixin padd-t($padding-top) {
+    padding-top: $padding-top + px;
+}
+
+@mixin padd-b($padding-bottom) {
+    padding-bottom: $padding-bottom + px;
+}
+
+//margin
+@mixin marg-x($marg-L, $marg-R) {
+    margin-left: $marg-L + px;
+    margin-right: $marg-R + px;
+    
+}
+
+@mixin marg-y($marg-T, $marg-B) {
+    margin-top: $marg-T + px;
+    margin-bottom: $marg-B + px;
+    
+}
+
+@mixin marg-t($margin-top) {
+    margin-top: $margin-top + px;
+}
+
+@mixin marg-b($margin-bottom) {
+    padding-bottom: $margin-bottom + px;
+}
+// button
+
+@mixin btn {
+    font-size: 16px;
+    color: $white-color;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    display: inline-block;
+    padding: 20px 25px;
+    background-color: $main-color;
+    border: none;
+    outline: none;
+    transition: background-color .4s linear;
+
+    @media #{$large-device} {  
+        padding: 18px 20px;
+    }
+    @media #{$medium-device} { 
+        padding: 16px 18px;
+    }
+    @media #{$small-device} {  
+        padding: 15px 18px;
+        font-size: 14px;
+    }
+
+    &:hover{
+        background-color: $title-color;
+        color: $main-color;
+    }
+}
+
+@mixin btn-2 {
+    font-size: 16px;
+    color: $white-color;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    transition: color .4s linear;
+
+    &:hover{
+        color: $main-color;
+    }
+}
+
+//cart-button
+
+@mixin btn-cart {
+    display: inline-block;
+    @include font-all($main-font, 14, 600);
+    @include text-all($white-color, uppercase, 85);
+    @include padd-x(20, 20);
+    background: $btn-hover-bg;
+
+    @media #{$large-device} {
+        line-height: 65px;
+    }
+    @media #{$medium-device} {
+        line-height: 55px;
+        @include padd-x(10, 10);
+    }
+    @media #{$small-device} {
+        line-height: 40px;
+    }
+
+    &:hover{
+        background: $main-color;
+    }
+}
+
+//paragrape style
+
+@mixin para-style {
+    @include font-all($secondary-font, 20, 300);
+    @include text-all($para-color, capitalize, 32);
+
+    @media #{$large-device} {
+        font-size: 18px;
+        
+    }
+    @media #{$medium-device} {
+        font-size: 16px;
+        
+    }
+    @media #{$small-device} {
+        font-size: 14px;
+        line-height: 25px;
+        text-align: justify;
+    }
+}
+
+@mixin top-shape($height) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    content: '';
+    background: $main-color;
+}

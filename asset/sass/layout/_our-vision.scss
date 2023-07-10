@@ -1,0 +1,82 @@
+.our-vision-area{
+    background: $main-bg;
+    .single-vision{
+        @media #{$small-device} {
+            margin: 8px 0;
+            
+        }
+        .vision-icon{
+            margin-top: 25px;
+            @media #{$small-device} {
+                margin-top: 0px;
+                
+            }
+        }
+        background: $white-color;
+        @include padd-both(80, 50);
+
+        @media #{$large-device} {
+            @include padd-both(60, 40);
+            
+        }
+        @media #{$medium-device} {
+            @include padd-both(30, 20);
+            
+        }
+        @media #{$small-device} {
+            @include padd-both(20, 20);
+            
+        }
+
+        .vision-contain{
+            h2{
+                @include font-all($secondary-font, 35, 600);
+                @include text-all($title-color, capitalize, 50);
+                @include padd-y(35, 30);
+
+                @media #{$medium-device} {
+                    @include padd-y(20, 20);
+                    
+                }
+                @media #{$small-device} {
+                    @include padd-y(15, 15);
+                    
+                }
+            }
+            p{
+                @include para-style;
+            }
+            button{
+                margin-top: 35px;
+
+                @media #{$medium-device} {
+                    margin-top: 25px;
+                    
+                }
+                @media #{$small-device} {
+                    margin-top: 20px;
+                    
+                }
+
+                a{
+                    @include btn;
+                    
+                    @include padd-both(20, 40);
+
+                    @media #{$large-device} {
+                        @include padd-both(20, 30);
+                        
+                    }
+                    @media #{$medium-device} {
+                        @include padd-both(15, 20);
+                        
+                    }
+                    @media #{$small-device} {
+                        @include padd-both(15, 20);
+                        
+                    }
+                }
+            }
+        }
+    }
+}

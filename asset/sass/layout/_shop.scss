@@ -1,0 +1,68 @@
+//shop-area
+
+.shop-area{
+    .shop-wapper{
+        height: 100%;
+        overflow: hidden;
+
+        .single-shop{
+            @include padd-both(70, 40);
+            height: 100%;
+            
+    
+            @media #{$large-device} { 
+                 @include padd-both(60, 40); 
+                margin: 15px 0;
+            }
+            @media #{$medium-device} {
+                @include padd-both(50, 30);  
+                margin: 10px 0;
+    
+                
+            }
+            
+            @media #{$small-device} { 
+                @include padd-both(30, 20); 
+                
+            }
+    
+            h2{
+                z-index: 1;
+                @include font-all($secondary-font, 20, 400);
+                @include text-all($white-color, uppercase, 35);
+                
+                 }
+    
+             a{
+                 @include btn-2;
+                 @include padd-both(40, 0);
+                 padding-right: 60px;
+                 z-index: 1;
+    
+                 i{
+                     top: 50%;
+                     right: 20%;
+                     transform: translate(-50%, -50%);
+                 }
+                 &:hover i{
+                     right: 0;
+                     color:$para-color;
+                 }
+             }
+             .image-bg {
+                 bottom: 0;
+                 right: 0;
+    
+                 img{
+                     width: auto;
+                     height: auto;
+                     position: absolute;
+                     bottom: 3%;
+                     right: 5%;
+                     z-index: 0;
+                 }
+                 
+             }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.videos-area{
+    .videos-view{
+        .videos-icon{
+            a{
+                height: 110px;
+                width: 110px;
+                border-radius: 50%;
+                background-color: $videos-bg;
+                display: inline-block;
+
+                position: relative;
+
+                @media #{$large-device} {
+                    height: 100px;
+                    width: 100px;
+                }
+                @media #{$medium-device} {
+                    height: 70px;
+                    width: 70px;
+                }
+                @media #{$small-device} {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                &::after{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    content: '';
+                    background-color: transparent;
+                    z-index: -1;
+                    border-radius: 50%;
+                    border: 1px solid $videos-zoom-bg;
+                    animation: videos 1s infinite;
+                    animation-timing-function: linear;
+                }
+                &::before{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    content: '';
+                    background-color: transparent;
+                    z-index: -1;
+                    height: calc(100% + 18px);
+                    width: calc(100% + 18px);
+                    border-radius: 50%;
+                    border: 1px solid $videos-bg;
+                    animation: videos 1.5s infinite;
+                    animation-timing-function: linear;
+                }
+                i{
+                    font-size: 18px;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+
+@keyframes videos {
+    from {
+        height: 100%;
+        width: 100%;
+    }
+    to {
+        height: calc(100% + 25px);
+        width: calc(100% + 25px);
+    }
+}

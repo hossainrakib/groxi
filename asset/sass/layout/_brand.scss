@@ -1,0 +1,32 @@
+.brand-area{
+    padding-bottom: 200px;
+
+    @media #{$large-device} {
+        padding-bottom: 150px;
+    }
+    @media #{$medium-device} {
+        padding-bottom: 100px;
+    }
+    .brand-logo{
+        display: flex;
+        justify-content: flex-end;
+
+        @media #{$medium-device} {
+            justify-content: center;
+        }
+        margin: 0 15px;
+        img{
+            height: auto;
+            width: auto;
+        }
+    }
+    .brand-active{
+        .slick-list{
+            width: 80%;
+
+            @media #{$medium-device} {
+                width: 100%;
+            }
+        }
+    }
+}

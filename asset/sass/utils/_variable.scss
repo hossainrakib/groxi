@@ -1,0 +1,124 @@
+// text-color
+$title-color:#252932;
+$main-color:#9fcb22;
+$para-color:#6c6c6c;
+$white-color:#fff;
+$footer-color:#6ea68b;
+
+//product
+$ratting-color:#fccc42;
+$main-ratting:#c1c4c4;
+$wish-color:#bdbdbd;
+
+//mobile-menu
+$mobile-icon:rgb(202, 98, 80);
+$mobile-icon-bg:#14462e;
+
+//background-color
+$loader-bg:#e7e4d0;
+$header-bg:#f3f5f4;
+$main-bg:#f6fafb;
+$wish-bg:#d9485b;
+$btn-hover-bg:#14462e;
+$footer-bg:#14462e;
+$videos-bg:#ef8228;
+$videos-zoom-bg:#cac8c3;
+$border-details:#d7e6ea;
+$input-bg:#f8fbf6;
+$contact-para:#f6fafb;
+//border-color
+
+$footer-border-color:#37624d;
+
+.shop-bg-one{
+    background: #9fded4;
+}
+.shop-bg-two{
+    background: #fa4231;
+}
+.shop-bg-three{
+    background: #acdd23;
+}
+
+.bg-black{
+    background: $title-color;
+}
+
+
+
+//extent
+
+.right-0{
+    right: 0 !important;
+}
+.bottom-0{
+    right: 0 !important;
+}
+
+//
+.pt-30{
+    padding-top: 30px !important;
+}
+.mt-30{
+    margin-top: 30px !important;
+}
+// background-cover
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+//hero-space
+
+.hero-height{
+    height: 550px;
+
+    @media #{$large-device} {  
+        height: 500px;
+    }
+    @media #{$medium-device} { 
+        height: 400px;
+    }
+    @media #{$small-device} {  
+        height: 350px;
+    }
+    @media #{$exSmall-device} {  
+        height: 300px;
+    }
+}
+
+
+.hero-height-erros{
+    height: 570px !important;
+
+    @media #{$large-device} {  
+        height: 520px !important;
+    }
+    @media #{$medium-device} { 
+        height: 410px !important;
+    }
+    @media #{$small-device} {  
+        height: 330px !important;
+    }
+    @media #{$exSmall-device} {  
+    }
+}
+//erros height
+.erros-height{
+    height: 950px;
+
+    @media #{$large-device} {  
+        height: 720px !important;
+    }
+    @media #{$medium-device} { 
+        height: 610px !important;
+    }
+    @media #{$small-device} {  
+        height: 500px !important;
+    }
+    @media #{$exSmall-device} {  
+        height: 450px !important;
+    }
+}
+

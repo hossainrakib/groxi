@@ -1,0 +1,299 @@
+//hero-area
+
+.hero-area{
+    position: relative;
+
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../img/hero/shape-header.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 1;
+        width: 15%;
+        height: 25%;
+        content: '';
+    }
+    .hero-contain{
+        position: relative;
+        z-index: 999;
+
+        &-sub-title{
+            font-family: $secondary-font;
+            font-size: 25px;
+            color: $main-color;
+            text-transform: capitalize;
+
+            
+            @media #{$large-device} {  
+                font-size: 20px;
+            }
+            @media #{$medium-device} {  
+                font-size:17px;
+            }
+            
+            @media #{$medium-device} {  
+                font-size:15px;
+            }
+        }
+
+        &-heading h1{
+            font-family: $secondary-font;
+            font-size: 70px;
+            line-height: 75px;
+            text-transform: capitalize;
+            word-spacing: 16px;
+            font-weight: 600;
+            @include padd-y(20px,20px);
+
+            @media #{$large-device} {  
+                font-size: 55px;
+                line-height: 60px;
+            }
+            @media #{$medium-device} {  
+                font-size:35px;
+                line-height: 50px;
+            }
+            
+            @media #{$small-device} {  
+                font-size:25px;
+                line-height: 40px;
+            }
+
+        }
+        &-para{
+            font-size: 24px;
+            color: $title-color;
+            font-weight: 400;
+            line-height: 35px;
+            text-transform: capitalize;
+
+            
+
+            @media #{$medium-device} {  
+                font-size:20px;
+            }
+            
+            @media #{$medium-device} {  
+                font-size:19px;
+            }
+        }
+
+        &-btn{
+            @include padd-t(40);
+
+            
+
+            @media #{$medium-device} {  
+                @include padd-t(35);
+            }
+            
+            @media #{$medium-device} {  
+                @include padd-t(25);
+            }
+            @media #{$small-device} {  
+                @include padd-t(20);
+            }
+            
+
+            ul{
+                li{
+                    display: inline-block;
+                    &:last-child button{
+                        margin-right: 0;
+                        background-color: black !important;
+                        &:hover{
+                            background-color: $main-color !important;
+                            color: $white-color;
+                        }
+                    }
+
+                    
+                    button{
+                         margin-right: 15px;
+                        a{
+                            color: inherit;
+                        }
+
+                        @include btn;
+                    }
+                }
+
+            }
+        }
+
+        //about-index
+        .breadcrumbs{
+            background-color: $white-color;
+            border-top: 2px solid $main-color;
+            @include padd-y(50,50);
+
+            @media #{$large-device} {  
+                @include padd-y(40,40);
+            }
+            @media #{$medium-device} { 
+                @include padd-y(35,35);
+            }
+            @media #{$small-device} {  
+                @include padd-y(30,30);
+            }
+            .link-pass{
+                ul{
+                    li{
+    
+                        a{
+                            @include font-all($secondary-font, 25, 500);
+                            @include text-all($main-color, capitalize, 85);
+                            display: inline-block;
+
+                            @media #{$large-device} { 
+                                line-height: 65px;
+                            }
+                            @media #{$medium-device} { 
+                                line-height: 50px;
+                                font-size: 20px;
+                            }
+                            @media #{$small-device} {
+                                line-height: 40px;
+                            }
+                            @media #{$exSmall-device} {
+                                line-height: 35px;
+                                font-size: 18px;
+                            }
+                            i{
+                                margin: 0 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .link-title{
+                h2{
+                    @include font-all($secondary-font, 55, 500);
+                    @include text-all($title-color, capitalize, 75);
+
+                    
+                    @media #{$large-device} { 
+                        line-height: 65px;
+                    }
+                    @media #{$medium-device} { 
+                        line-height: 50px;
+                        font-size: 40px;
+                    }
+                    @media #{$small-device} {
+                        line-height: 40px;
+                        font-size: 30px;
+                    }
+                    @media #{$exSmall-device} {
+                        line-height: 35px;
+                    }
+                }
+            }
+            &:hover .link-pass ul li a{
+                color:$btn-hover-bg;
+            }
+            &:hover .link-pass ul li a i{
+                color:$mobile-icon;
+            }
+            &:hover .link-title h2{
+                color:$mobile-icon;
+            }
+
+        }
+        
+
+    }
+    .slick-slider .slick-track, .slick-slider .slick-list{
+        height: 100%;
+    }
+    .erros-wrapper{
+        background-color: $white-color;
+        border-top: 2px solid $main-color;
+        @include padd-both(100, 100);
+
+        @media #{$large-device} {
+            @include padd-both(70, 70);
+        }
+        @media #{$medium-device} { 
+            @include padd-both(50, 50);
+        }
+        @media #{$small-device} {  
+            @include padd-both(20, 20);
+        }
+        .erros-image{
+            img{
+                @media #{$large-device} {
+                    height: 100%;
+                    width: 100%;
+                }
+                @media #{$medium-device} { 
+                    @include padd-both(50, 50);
+                }
+                @media #{$small-device} {  
+                    @include padd-both(20, 20);
+                }
+            }
+        }
+        .erros-contain{
+            .erros-count{
+                h2{
+                    @include font-all($secondary-font, 200, 600);
+                    @include text-all($title-color, capitalize, 150);
+
+                    @media #{$large-device} {
+                        font-size: 120px;
+                        line-height: 140px;
+                    }
+                    @media #{$medium-device} { 
+                        font-size: 80px;
+                        line-height: 100px;
+                    }
+                    @media #{$small-device} {  
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+                }
+            }
+            .erros-discrip{
+                span{
+                    @include font-all($secondary-font, 25, 500);
+                    @include text-all($main-color, capitalize, 51);
+
+                    @media #{$large-device} {
+                        font-size: 20px;
+                        line-height: 35px;
+                    }
+                    @media #{$medium-device} { 
+                        font-size: 17px;
+                        line-height: 30px;
+                    }
+                    @media #{$small-device} {  
+                        font-size: 15px;
+                    }
+                    @media #{$small-device} {  
+                        line-height: 20px;
+                    }
+                }
+                p{
+                    @include para-style;
+                }
+            }
+            button{
+                a{
+                    @include btn;
+                    @include padd-both(20, 30);
+                    @media #{$medium-device} { 
+                        @include padd-both(10, 15);
+                    }
+                    @media #{$small-device} {  
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+

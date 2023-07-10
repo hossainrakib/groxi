@@ -1,0 +1,42 @@
+.reviews-area{
+    .reviews-menu{
+        .nav-tabs{
+            border-color: $border-details;
+            &:first-child {
+                padding-left: 0;
+            }
+            button.nav-link{
+                @include font-all($secondary-font, 22, 500);
+                @include text-all($title-color, capitalize, 22);
+                padding: 0px 15px 25px 15px;
+                border: none;
+
+                @media #{$large-device} {
+                    font-size: 20px;
+                    padding: 0px 13px 22px 13px;
+                }
+                @media #{$medium-device} {
+                    font-size: 18px;
+                    padding: 0px 13px 20px 13px;
+                }
+                @media #{$small-device} {
+                    font-size: 15px;
+                    padding: 0px 10px 20px 10px;
+                }
+            }
+            button.nav-link.active{
+                border-bottom: 2px solid $main-color;
+            }
+            .nav-link:focus, .nav-link:hover{
+                border: none;
+                isolation: inherit;
+                color: $main-color;
+            }
+        }
+    }
+    .reviews-contain{
+        .tab-pane{
+            @include para-style;
+        }
+    }
+}

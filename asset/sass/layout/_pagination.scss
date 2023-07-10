@@ -1,0 +1,37 @@
+.pagination-area{
+    .pagination{
+        .page-item{
+            margin-left: 15px;
+            &.active .page-link{
+                background-color: $main-color;
+                color: $white-color !important;
+            }
+            
+        }
+        .page-link{
+            
+        @include font-all($secondary-font, 20, 300);
+        @include text-all($para-color, capitalize, auto);
+        padding: 15px 20px;
+        border:1px solid $border-details;
+        background-color: transparent;
+        transition: background-color .4s ease-in-out;
+
+
+        @media #{$medium-device} {
+            @include padd-both(13, 17);
+        }
+        @media #{$small-device} {
+            @include padd-both(10, 15);
+        }
+
+            i{
+                font-size: 16px;
+            }
+            &:hover {
+                background-color: $main-color;
+                color: $white-color;
+            }
+        }
+    }
+}

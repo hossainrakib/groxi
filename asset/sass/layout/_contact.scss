@@ -1,0 +1,237 @@
+.contact-area{
+    .contact, .our-location{
+        background-color: $main-bg;
+        @include padd-both(70, 40);
+
+        @media #{$large-device} {
+            @include padd-both(50, 25);
+        }
+        @media #{$medium-device} {
+            @include padd-both(30, 20);
+        }
+        @media #{$small-device} {
+            @include padd-both(20, 20);
+        }
+        @media #{$exSmall-device} {
+        }
+        .section-heading{
+            margin-bottom: 35px;
+
+            @media #{$large-device} {
+                margin-bottom: 30px;
+            }
+            @media #{$medium-device} {
+                margin-bottom: 25px;
+            }
+            @media #{$small-device} {
+                margin-bottom: 20px;
+            }
+            @media #{$exSmall-device} {
+            }
+
+        }
+        form{
+            input.form-control{
+                background-color: $white-color;
+                border: none;
+                @include font-all($secondary-font, 20, 300);
+                @include text-all($para-color, capitalize, 28);
+                @include padd-both(20, 20);
+
+                @media #{$large-device} {
+                    @include padd-both(15, 20);
+                    font-size: 18px;
+                }
+                @media #{$medium-device} {
+                }
+                @media #{$small-device} {
+                    @include padd-both(20, 20);
+                }
+                @media #{$exSmall-device} {
+                    @include padd-both(15, 20);
+                }
+
+
+            }
+            
+            .form-control:focus{
+                text-transform: lowercase;
+                font-size: 18px;
+                color:$title-color;
+                background-color:$input-bg;
+                border-color: $main-color;
+                outline:0;
+                box-shadow:0 0 0 1px $main-color;
+            }
+            .text-area{
+                .form-floating{
+                    .form-control{
+                        @media #{$large-device} {
+                            height: 150px !important;
+                        }
+                        @media #{$medium-device} {
+                            height: 100px !important; 
+                        }
+                        @media #{$small-device} {
+                        }
+                        @media #{$exSmall-device} {
+                        }
+                    }
+                    label{
+                        @include font-all($secondary-font, 22, 300);
+                        @include text-all($title-color, uppercase, 28);
+
+                        @media #{$large-device} {
+                            font-size: 20px;
+                            line-height: 25px;
+                        }
+                        @media #{$medium-device} {
+                            font-size: 16px;
+                            line-height: 25px;
+                        }
+                        @media #{$small-device} {
+                            font-size: 20px;
+                            line-height: 25px; 
+                        }
+                        @media #{$exSmall-device} {
+                        }
+    
+                    }
+                }
+            }
+            .submit-btn{
+                margin-top: 15px;
+                button{
+                    a{
+                        @include btn;
+                        @include padd-both(20, 40);
+
+                    }
+                }
+            }
+            .success-box{
+                #reply{
+                    @include font-all($secondary-font, 22, 500);
+                    @include text-all($title-color, capitalize, 28);
+                    
+                    @media #{$large-device} {
+                        font-size: 18px;
+                        line-height: 25px;
+                    }
+                    @media #{$medium-device} {
+                        font-size: 16px;
+                    }
+                    @media #{$small-device} {
+                    }
+                    @media #{$exSmall-device} {
+                    }
+                }
+            }
+        }
+    }
+    .our-location{
+        background: $main-color;
+        .section-heading{
+            h2{
+                color: $white-color;
+            }
+        }
+        .sub-discrip{
+            p{
+                @include font-all($secondary-font, 22, 300);
+                @include text-all($contact-para, capitalize, 28);
+
+                @media #{$large-device} {
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+                @media #{$medium-device} {
+                }
+                @media #{$small-device} {
+                }
+                @media #{$exSmall-device} {
+                }
+
+            }
+        }
+        .address{
+            .single-address{
+                &:hover i{
+                    color: $mobile-icon;
+                }
+            }
+            .address-icon{
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                &:hover i{
+                    color: $mobile-icon;
+                }
+                i{
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 50px;
+                    color: $white-color;
+
+                    @media #{$small-device} {
+                        font-size: 40px !important;
+                    }
+                    @media #{$exSmall-device} {
+                        font-size: 30px !important;
+                    }
+                }
+            }
+            .address-discrip{
+                &:hover .title h2{
+                    color: $title-color;
+                }
+                .title{
+                    h2{
+                        @include font-all($secondary-font, 35, 500);
+                        @include text-all($contact-para, capitalize, 32);
+                        margin-bottom: 20px;
+
+                        @media #{$large-device} {
+                            font-size: 30px;
+                            line-height: 25px;
+                        }
+                        @media #{$medium-device} {
+                            margin-bottom: 15px;
+                        }
+                        @media #{$small-device} {
+                            margin-bottom: 10px;
+                            font-size: 26px;
+                        }
+                        @media #{$exSmall-device} {
+                        }
+
+                        
+                    }
+                }
+                .sub-discrip{
+
+
+                    P{
+                        &:first-child{
+                            margin-bottom: 6px;
+                        }
+                        @include font-all($secondary-font, 20, 300);
+                        @include text-all($contact-para, capitalize, 30);
+
+                        
+                        @media #{$large-device} {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
+                        @media #{$medium-device} {
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

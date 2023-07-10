@@ -1,0 +1,86 @@
+.testimonials-area{
+    .single-testimonials{
+        background: $main-bg;
+        @include padd-both(60, 50);
+        @include marg-t(60);
+
+        @media #{$large-device} {
+            @include padd-both(40, 30);
+            @include marg-t(40); 
+        }
+        @media #{$medium-device} {
+            @include padd-both(30, 25);
+            @include marg-t(30); 
+        }
+        @media #{$small-device} {
+            @include padd-both(20, 20);
+            @include marg-t(20); 
+        }
+        @media #{$exSmall-device} {
+            @include marg-t(20); 
+        }
+        &-icon{
+            img{
+                height: auto;
+                width: auto;
+            }
+        }
+        .testimonials-contain{
+            &-dis{
+                p{
+                    @include para-style;
+                    font-style: italic;
+                    @include padd-y(40,40);
+
+                    @media #{$large-device} {
+                        @include padd-y(30,30);
+                    }
+                    @media #{$medium-device} {
+                        @include padd-y(25,25);
+                    }
+                    @media #{$small-device} {
+                        @include padd-y(20,20);
+                    }
+                }
+                &-ratting{
+                    margin-bottom: 15px;
+
+                    @media #{$medium-device} {
+                        margin-bottom: 10px;
+                    }
+                    i{
+                        padding-right: 7px;
+                        color: $main-ratting;
+                        font-size: 16px;
+                    }
+                    i.gold-color{
+                        color: $ratting-color;
+                    }
+                }
+            }
+            .testimonials-name{
+                h2{
+                    @include font-all($secondary-font, 25, 500);
+                    @include text-all($btn-hover-bg, capitalize, auto);
+                    
+                    @media #{$large-device} {
+                        font-size: 20px;
+                    }
+                    @media #{$small-device} {
+                        font-size: 18px;
+                    }
+                    span{
+                        font-size: 16px;
+                        margin-left: 15px;
+                        color:$main-color;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .testimonials-name h2{
+                color: $wish-bg;
+            }
+        }
+    }
+}

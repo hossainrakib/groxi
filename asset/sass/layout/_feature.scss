@@ -1,0 +1,49 @@
+.feature-area{
+    background-color: $main-bg;
+
+    .single-product{
+        background-color: $white-color;
+        margin: 15px 0 !important;
+    }
+}
+.menu-tab{
+    @include padd-y(50, 20);
+
+    @media #{$large-device} {
+        @include padd-y(30, 0);
+        
+    }
+    ul.nav.nav-pills{
+        li.nav-item{
+            button.nav-link{
+                @include font-all($secondary-font, 25, 500);
+                @include text-all($title-color, capitalize, auto);
+                @include padd-x(25, 25);
+
+                @media #{$large-device} {
+                    @include padd-x(20, 20);
+                    
+                }
+                @media #{$large-device} {
+                    @include padd-x(15, 15);
+                    font-size: 18px;
+                    
+                }
+                @media #{$medium-device} {
+                    @include padd-x(15, 15);
+                    font-size: 16px;
+                    
+                }
+                @media #{$medium-device} {
+                    @include padd-x(12, 12);
+                    font-size: 13px;
+                    
+                }
+            }
+            button.nav-link.active{
+                background-color: inherit !important;
+                color: $main-color;
+            }
+        }
+    }
+} 

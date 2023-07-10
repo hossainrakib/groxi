@@ -1,0 +1,199 @@
+.product-details-area{
+    .product-nav{
+        button.slick-arrow{
+            width: 100%;
+            background-color: $main-color;
+            color: $white-color;
+            border: none;
+
+            i{
+                font-size: 16px;
+                padding: 10px 0;
+            }
+        }
+        button.slick-prev{
+            margin-bottom: 10px;
+            
+        }
+        button.slick-next{
+            margin-top: 10px;
+        }
+        .product-slide-nav{
+            height: 85px;
+            margin: 10px 0;
+            @media #{$medium-device} {
+                margin: 5px 0;
+                height: 70px;
+            }
+
+            &.slick-current{
+                border: 1px solid $main-color;
+            }
+        }
+    }
+    .product-slide{
+        .slick-list, .slick-track{
+            height: 100%;
+            @media #{$medium-device} {
+                height: 410px;
+            }
+            @media #{$small-device} {
+                height: 332px;
+            }
+        }
+
+    }
+    .product-discrip{
+        margin-left: 40px;
+
+        @media #{$large-device} {
+            margin-left: 20px;
+        }
+        @media #{$medium-device} {
+            margin-left: 0px;
+            margin-top: 40px;
+        }
+        @media #{$small-device} { 
+            margin-top: 30px;
+        }
+        @media #{$exSmall-device} {
+            margin-top: 20px;
+        }
+        .section-heading{
+            h2{
+                @media #{$small-device} {
+                    font-size: 30px; 
+                }
+            }
+        }
+        .single-product{
+            background-color: inherit;
+            border: none;
+            &:hover{
+                border: none;
+            }
+            .product-contain{
+                .product-price{
+                    padding: 20px 0;
+                    @media #{$small-device} {
+                        padding: 0px 0 10px 0; 
+                    }
+                    span{
+                        margin-right: 15px;
+                    }
+                    span.old-price{
+                        @include font-all($secondary-font, 30, 300);
+
+
+                        @media #{$medium-device} {
+                            font-size: 20px;
+                        }
+                    }
+                    span.new-price{
+                        @include font-all($secondary-font, 40, 500);
+
+                        @media #{$medium-device} {
+                            font-size: 30px;
+                        }
+                        @media #{$small-device} {
+                            font-size: 25px;
+                        }
+                    }
+                }
+                
+                .product-cart{
+                    @include padd-y(0, 40);
+
+                    @media #{$large-device} {
+                        @include padd-y(0, 30);
+                    }
+                    @media #{$medium-device} {
+                        @include padd-y(0, 20);
+                    }
+                    @media #{$small-device} {
+                        @include padd-y(0, 15);
+                    }
+                    button{
+                        a{
+                            line-height: 16px;
+                            @include padd-both(15, 35);
+                            @media #{$small-device} {
+                                @include padd-both(15, 20);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sub-discrip{
+            .sub-title{
+                h3{
+                    @include font-all($secondary-font, 25, 600);
+                    @include text-all($title-color, capitalize, 22);
+                    margin-bottom:20px;
+                }
+            }
+            p{
+                @include para-style;
+            }
+        }
+        .share-icon{
+            ul{
+                li{
+                    &:first-child a{
+                        @include font-all($secondary-font, 25, 600);
+                        @include text-all($title-color, capitalize, 22);
+                        padding-right: 0;
+
+                    }
+
+                    a{
+                        @include padd-both(20, 7.5);
+                        font-size: 18px;
+                        display: inline-block;
+                        font-weight: 500;
+                        color: $main-color;
+                    }
+                    &:hover a{
+                        color: $mobile-icon;
+                    }
+                }
+            }
+        }
+        .our-service{
+            .service-contain{
+                border: 1px solid $border-details;
+                @include padd-both(30, 20);
+                height: 100%;
+
+
+                @media #{$medium-device} {
+                    @include padd-both(15, 20);
+                }
+
+                .service-icon{
+                    display: inline-block;
+                    img{
+
+                    }
+                }
+                h2{
+                    @include font-all($secondary-font, 25, 600);
+                    @include text-all($title-color, capitalize, 30);
+                    padding-left: 20px;
+                    @media #{$medium-device} {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+                    @media #{$small-device} {
+                        font-size: 20px;
+                    }
+                    @media #{$exSmall-device} {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

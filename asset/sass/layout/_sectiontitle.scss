@@ -1,0 +1,110 @@
+
+// section-all
+
+.section-heading{
+    .sub-section-heading{
+        p{
+            @include text-all($main-color, capitalize, 85);
+            @include font-all($secondary-font, 12, 500);
+
+                
+            @media #{$large-device} { 
+                line-height: 75px;
+           }
+           @media #{$medium-device} {
+            line-height: 60px;
+               
+           }
+           
+           @media #{$small-device} { ; 
+            line-height: 45px;
+           }
+        }
+    }
+    h2{
+        @include text-all($title-color, capitalize, 75);
+        @include font-all($secondary-font, 45, 600);
+
+            
+        @media #{$large-device} { 
+            font-size: 40px;
+       }
+       @media #{$medium-device} {
+           font-size: 30px;
+           line-height: 55px;
+           
+       }
+       
+       @media #{$small-device} { 
+           font-size: 20px;
+           line-height: 40px;
+       }
+    }
+}
+
+//section-padding
+.section-padding{
+    @include padd-both(150, 0);
+
+    @media #{$large-device} {  
+         @include padd-both(110, 0);
+    }
+
+    @media #{$medium-device} {  
+         @include padd-both(80, 0);
+    }
+
+    @media #{$small-device} {  
+          @include padd-both(50, 0);
+    }
+}
+
+//speace-wrapper
+.speace-wrapper{
+    @include padd-t(50);
+
+    @media #{$large-device} {  
+    @include padd-t(40);
+   }
+
+   @media #{$medium-device} {  
+    @include padd-t(30);
+   }
+
+   @media #{$small-device} {  
+    @include padd-t(15);
+   }
+}
+
+//speace-details
+.speace-details{
+    @include marg-t(30);
+
+    @media #{$large-device} {  
+    @include marg-t(30);
+   }
+
+   @media #{$medium-device} {  
+    @include marg-t(25);
+   }
+
+   @media #{$small-device} {  
+    @include marg-t(15);
+   }
+}
+//speace-details
+.top-details{
+    @include marg-t(40);
+
+    @media #{$large-device} {  
+    @include marg-t(35);
+   }
+
+   @media #{$medium-device} {  
+    @include marg-t(30);
+   }
+
+   @media #{$small-device} {  
+    @include marg-t(15);
+   }
+}

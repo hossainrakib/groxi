@@ -1,0 +1,66 @@
+.our-service-area{
+    .single-service{
+        @media #{$small-device} {
+            @include padd-b(25);
+        }
+        .service-icon{
+            img{
+                height: auto;
+                width: auto;
+
+
+            }
+        }
+        .service-contain{
+            h2{
+                @include font-all($secondary-font, 25, 600);
+                @include text-all($title-color, capitalize, 50);
+                @include padd-y(25, 25);
+
+                @media #{$large-device} {
+                    @include padd-y(20, 20);
+                }
+                @media #{$medium-device} {
+                    @include padd-y(15, 15);
+                }
+                @media #{$small-device} {
+                    @include padd-y(10, 10);
+                }
+            }
+            p{
+                @include para-style;
+                line-height: 25px;
+
+                @media #{$small-device} {
+                    
+                    margin: 0 100px;
+                    text-align: center;
+
+                }
+                @media #{$exSmall-device} {
+                    
+                    margin: 0 30px;
+
+                }
+            }
+        }
+    }
+    .product-shop-img{
+        .image{
+            top: 0;
+            left: 0;
+
+            img{
+                @media #{$medium-device} {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        button{
+            a{
+                @include btn;
+            }
+        }
+    }
+}

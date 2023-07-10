@@ -1,0 +1,16 @@
+.location-area{
+    #map{
+        @media #{$large-device} {
+            height: 500px;
+        }
+        @media #{$medium-device} {
+            height: 400px;
+        }
+        @media #{$small-device} {
+            height: 350px;
+        }
+        @media #{$exSmall-device} {
+            height: 300px;
+        }
+    }
+}

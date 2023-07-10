@@ -1,0 +1,191 @@
+//trending-product-area
+
+.trending-product-area{
+    background-color: $white-color;
+}
+.product-tap{
+    @include padd-t(60);
+
+    @media #{$large-device} {
+        @include padd-t(40);
+    }
+    @media #{$medium-device} {
+        @include padd-t(30);
+    }
+    @media #{$small-device} {
+        @include padd-t(20);
+    }
+
+    //slider-active
+    .trending-product-active, .related-product-active{
+        .single-product{
+            margin: 0 15px;
+        }
+    }
+
+    .slick-initialized .slick-slide{
+        outline: none;
+    }
+}
+
+/* single-product */
+
+.single-product{
+    background: $main-bg;
+    border: 2px solid $main-bg;
+
+    .product-img{
+        height: 250px;
+        overflow: hidden;
+
+        @media #{$large-device} {
+            height: 200px;
+        }
+
+        img{
+            width: auto;
+            height: auto;
+        }
+        img.second-img{
+            transform: rotate(90deg);
+            visibility: hidden;
+            opacity: 0;
+        }
+        .product-img-sub-title{
+            top: -2px;
+            left: -2px;
+            h4{
+                @include font-all($secondary-font, 15, 500);
+                @include text-all($white-color, capitalize, 75);
+                background: $wish-bg;
+                @include padd-x(20, 20);
+
+                @media #{$large-device} {
+                    @include padd-x(15, 15);
+                    line-height: 50px;
+                    
+                }
+            }
+        }
+        .wish-list-icon{
+            top: 4%;
+            right: 7%;
+            i{
+                font-size: 16px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $wish-color;
+                transition: .4s;
+
+                @media #{$large-device} {
+                    height: 35px;
+                    width: 35px;
+                }
+                @media #{$medium-device} {
+                    height: 30px;
+                    width: 30px;
+                }
+                @media #{$small-device} {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+    }
+    .product-contain{
+        .product-ratting{
+            i{
+                @include padd-x(7, 7);
+                color: $main-ratting;
+                font-size: 16px;
+            }
+            i.gold-color{
+                color: $ratting-color;
+            }
+        }
+        .product-title{
+            h2{
+                @include font-all($secondary-font, 26, 600);
+                @include text-all($title-color, capitalize, 75);
+                @include padd-y(15, 15);
+                word-spacing: 7px;
+
+                @media #{$large-device} {
+                    line-height: 50px;
+                }
+                @media #{$medium-device} {
+                    line-height: 40px;
+                }
+                @media #{$small-device} {
+                    @include padd-y(5, 5);
+                }
+            }
+        }
+        .product-price{
+            @include font-all($main-font, 25, 500);
+            span{
+                margin: 0 7px;
+            }
+            span.old-price{
+                color:$main-ratting;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    background: $main-ratting;
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    transform: translateY(-50%);
+                }
+            }
+            span.new-price{
+                color: $main-color;
+            }
+        }
+        .product-cart{
+            @include padd-y(25, 50);
+
+            @media #{$large-device} {
+                @include padd-y(20, 40);
+            }
+            @media #{$medium-device} {
+                @include padd-y(20, 30);
+            }
+            @media #{$small-device} {
+                @include padd-y(20, 20);
+            }
+            button{
+                outline: none;
+                border: none;
+                a{
+                    @include btn-cart;
+                }
+            }
+        }
+    }
+    &:hover {
+        border: 2px solid $main-color;
+    }
+    &:hover .wish-list-icon i{
+        background-color: $main-color;
+        color: $white-color;
+
+    }
+    &:hover img.second-img{
+        transform: rotate(0deg);
+        visibility: visible;
+        opacity: 1;
+    }
+    &:hover .first-img{
+        visibility: hidden;
+        opacity: 0;
+    }
+}

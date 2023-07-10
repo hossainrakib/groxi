@@ -1,0 +1,110 @@
+.subscribe-area{
+    top: 100%;
+    left: 0;
+    transform: translateY(-45%);
+
+    /*
+    .shape-back{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+        background-color: $footer-bg;
+        z-index: -3;
+    }
+    */
+    
+    .subscribe-wrapper{
+        background: $main-color;
+
+        .subscribe-image{
+            .image{
+                bottom: -15%;
+                right: -20%;
+
+                @media #{$large-device} {
+                    top: -35%;
+                    left: -19%;
+                    right: -21%;
+                }
+                
+                img{
+                    height: auto;
+                    width: auto;
+
+                    @media #{$large-device} {
+                    height: 100%;
+                    width: 100%;
+                    }
+                }
+            }
+        }
+        .subscribe-contain{
+            @include padd-both(60,50);
+
+            @media #{$large-device} {
+                @include padd-both(40,30);
+            }
+            @media #{$medium-device} {
+                @include padd-both(25,20);
+            }
+
+            h2{
+                @include font-all($secondary-font, 45, 600);
+                @include text-all($white-color, capitalize, 75);
+                word-spacing: 5px;
+                margin-bottom: 15px;
+
+                @media #{$large-device} {
+                    font-size: 35px;
+                    line-height: 60px;
+                }
+                @media #{$medium-device} {
+                    font-size: 25px;
+                    line-height: 50px;
+                }
+            }
+            form{
+                .subscribe-box{
+                    input{
+                        @include padd-both(15, 20);
+                        border: none;
+                    }
+                    input::placeholder{
+                        @include font-all($secondary-font, 20, 300);
+                        @include text-all($para-color, capitalize, auto);
+
+                        
+                        @media #{$small-device} {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .submit-box{
+                    input{
+                        @include padd-both(15, 20);
+                        border: none;
+                        background-color: $btn-hover-bg;
+                        @include font-all($secondary-font, 16, 600);
+                        @include text-all($white-color, uppercase, auto);
+
+                        @media #{$large-device} {
+                            @include padd-both(15, 15);
+                            font-size: 14px;
+                        }
+                        @media #{$small-device} {
+                            @include padd-both(18, 10);
+                            font-size: 12px;
+                        }
+                        
+                        @media #{$exSmall-device} {
+                            font-size: 10px;
+                            @include padd-both(19.5, 10);
+                        }
+        
+                    }
+                }
+            }
+        }
+    }
+}

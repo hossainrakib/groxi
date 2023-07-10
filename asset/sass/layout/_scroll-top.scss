@@ -1,0 +1,27 @@
+.scroll-top{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: $title-color;
+    border-radius: 50%;
+
+    @media #{$small-device} {
+        height: 30px;
+        width: 30px;
+    }
+
+    &:hover{
+        background: $main-color;
+    }
+    i{
+        font-size: 18px;
+        color: $mobile-icon;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        position: absolute;
+    }
+}
